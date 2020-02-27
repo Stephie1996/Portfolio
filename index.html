@@ -2,12 +2,28 @@
 <html>
 
 <head>
-	<title>Astral by HTML5 UP</title>
+	<title>Ko Pin Ning</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+	<script>
+		//getElementById(抓取頁面上的元素)
+		function getElement(name) {
+			return document.getElementById(name);
+		}
+
+		//當網頁載入完成後執行
+		window.onload = function () {
+			//hook event(在form1被submit時...)
+			getElement('form1').onsubmit = function () {
+				return true;
+			};
+		};
+	</script>
+
 </head>
 
 <body class="is-preload">
@@ -20,7 +36,7 @@
 			<a href="#" class="icon solid fa-home"><span>Home</span></a>
 			<a href="#work" class="icon solid fa-folder"><span>Portfolio</span></a>
 			<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
-			<a href="#about" class="fas fa-file"><span>About</span></a>
+			<a href="#skill" class="fas fa-file"><span>Skill</span></a>
 		</nav>
 
 		<!-- Main -->
@@ -86,10 +102,12 @@
 								class="image fit"><img src="images/pic09.jpg" alt=""></a>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
-							<a target="_blank " href="https://bsfrontend2019.azurewebsites.net/LabForm/index.html" class="image fit"><img src="images/pic10.jpg" alt=""></a>
+							<a target="_blank " href="https://bsfrontend2019.azurewebsites.net/LabForm/index.html"
+								class="image fit"><img src="images/pic10.jpg" alt=""></a>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
-							<a target="_blank " href="https://bsfrontend2019.azurewebsites.net/BSFrontend/index.html" class="image fit"><img src="images/pic11.jpg" alt=""></a>
+							<a target="_blank " href="https://bsfrontend2019.azurewebsites.net/BSFrontend/index.html"
+								class="image fit"><img src="images/pic11.jpg" alt=""></a>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<iframe width="260" height="190" src="https://www.youtube.com/embed/o9Vx7SJfKgY"
@@ -106,7 +124,9 @@
 				<header>
 					<h2>Contact Me</h2>
 				</header>
-				<form action="#" method="post">
+				<form id="form1"
+					action="http://isbaas.azurewebsites.net/WebForms/Form2Mail.aspx?mailto=f22325076@gmail.com&amp;redirect=https://stephie1996.github.io/Portfolio/"
+					method="POST">
 					<div>
 						<div class="row">
 							<div class="col-6 col-12-medium">
@@ -130,14 +150,14 @@
 			</article>
 
 
-			<!-- About -->
-			<article id="about" class="panel">
+			<!-- Skill -->
+			<article id="skill" class="panel">
 				<header>
-					<h2>About Me</h2>
+					<h2>Skill</h2>
 				</header>
 				<h4>技能/專長</h4>
 				<p>程序語言-C＃</p>
-				<p>前端技術-HTML / CSS / SASS / RWD / JavaScript / jQuery / Bootstrap </p>
+				<p>前端技術-HTML / CSS / RWD / JavaScript / jQuery / Bootstrap </p>
 				<p>網站開發-ASP.NET MVC /ASP.NET Core</p>
 				<h4>使用平台與工具</h4>
 				<p>開發工具 - Visual Studio, Visual Studio Code</p>
