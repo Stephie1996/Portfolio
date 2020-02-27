@@ -1,8 +1,17 @@
-/*
-	Astral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+
+
+//getElementById(抓取頁面上的元素)
+function getElement(name) {
+	return document.getElementById(name);
+}
+
+//當網頁載入完成後執行
+window.onload = function () {
+	//hook event(在form1被submit時...)
+	getElement('form1').onsubmit = function () {
+		return true;
+	};
+};
 
 (function($) {
 
